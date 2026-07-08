@@ -1,0 +1,33 @@
+{
+  "name": "vexel-ai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.7",
+    "@react-three/fiber": "^9.4.0",
+    "@react-three/postprocessing": "^3.0.4",
+    "framer-motion": "^12.23.26",
+    "lenis": "^1.3.12",
+    "next": "^15.5.6",
+    "postprocessing": "^6.37.8",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/three": "^0.180.0",
+    "playwright-core": "^1.61.1",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5"
+  }
+}

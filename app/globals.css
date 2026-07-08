@@ -1,0 +1,154 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-montserrat), "Montserrat", sans-serif;
+  --font-display: var(--font-montserrat), "Montserrat", sans-serif;
+  --font-mono: var(--font-geist-mono), "Geist Mono", monospace;
+  --font-inter: var(--font-inter), "Inter", sans-serif;
+
+  --color-accent: #18caff;
+  --color-accent-deep: #006cff;
+  --color-line: rgba(255, 255, 255, 0.1);
+  --ease-brand: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  background-color: #000000;
+  overflow-x: clip;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 3px;
+}
+
+body {
+  margin: 0;
+  background-color: #000000;
+  overflow-x: clip;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(24, 202, 255, 0.35);
+  color: #ffffff;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+/* Glass card shell used across sections */
+.glass {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+/*
+ * Interactive glass card: hairline warms, gentle lift, and a
+ * cursor-tracked cyan light (driven by --mx/--my set in JS).
+ */
+.card {
+  position: relative;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transition:
+    transform 0.4s var(--ease-brand),
+    border-color 0.4s var(--ease-brand);
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s var(--ease-brand);
+  background: radial-gradient(
+    260px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(24, 202, 255, 0.08),
+    transparent 70%
+  );
+}
+@media (hover: hover) {
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.22);
+  }
+  .card:hover::before {
+    opacity: 1;
+  }
+}
+
+/* Section eyebrow: mono, tracked, cyan — with a dark halo so it
+ * survives being composited over the bright 3D sphere. */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  text-shadow:
+    0 1px 3px rgba(0, 8, 20, 0.95),
+    0 2px 18px rgba(0, 8, 20, 0.9),
+    0 0 32px rgba(0, 8, 20, 0.8);
+}
+
+/* Display headline defaults — Montserrat needs semibold weight and
+ * slightly gentler tracking than a condensed grotesk. */
+.display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: #ffffff;
+  text-wrap: balance;
+}
+
+/* Text that floats over the 3D scene gets a scene-safe halo
+ * (invisible on pure-black sections). */
+.on-scene {
+  text-shadow: 0 2px 22px rgba(0, 8, 20, 0.85);
+}
+
+/* Ambient depth for flat-black stretches */
+.vignette-top {
+  background-image: radial-gradient(
+    90% 60% at 50% 0%,
+    rgba(0, 108, 255, 0.07),
+    transparent 70%
+  );
+}
+
+/* Focus ring that survives both black and cyan backdrops */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+  box-shadow:
+    0 0 0 5px rgba(0, 0, 0, 0.65),
+    0 0 0 7px rgba(24, 202, 255, 0.9);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
