@@ -77,20 +77,20 @@ export default function CTA() {
 
           {/* Footer bar */}
           <div className="absolute right-0 bottom-0 left-0 border-t border-white/10 bg-black/70">
-            <div className="mx-auto flex w-full max-w-[1440px] flex-row items-center justify-between gap-4 px-10 py-5 max-[992px]:px-5 max-[480px]:flex-col max-[480px]:items-start max-[480px]:gap-3">
+            <div className="mx-auto flex w-full max-w-[1440px] flex-row items-center justify-between gap-4 px-10 py-5 max-[992px]:px-5 max-[480px]:flex-col max-[480px]:items-center max-[480px]:gap-3">
               <img src="/images/logo-white.svg" alt="Vexel" className="w-[72px] opacity-90" />
-              <div className="font-mono text-xs leading-[1.6] tracking-[0.08em] text-white/75 uppercase">
-                © {new Date().getFullYear()} — Vexel Inc. All rights reserved
+              <div className="font-mono text-[12.5px] leading-[1.6] tracking-[0.08em] text-white/75 uppercase max-[480px]:text-center">
+                © {new Date().getFullYear()} — All rights reserved
               </div>
-              <div className="font-mono text-xs leading-[1.6] tracking-[0.08em] text-white/75 uppercase">
-                3D model by{" "}
+              <div className="font-mono text-[12.5px] leading-[1.6] tracking-[0.08em] text-white/75 uppercase max-[480px]:text-center">
+                Designed &amp; developed by{" "}
                 <a
-                  href="https://sketchfab.com/tamminen"
+                  href="https://webify.org.in"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="-my-2 inline-block py-2 text-white/90 underline-offset-4 transition-colors hover:text-white hover:underline"
+                  className="-my-2 inline-block py-2 font-semibold text-white underline-offset-4 transition-colors hover:text-[#18caff] hover:underline"
                 >
-                  Tamminen
+                  Webify
                 </a>
               </div>
             </div>

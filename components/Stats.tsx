@@ -35,7 +35,7 @@ export default function Stats() {
                     <CountUp value={stat.value} />
                   )}
                 </div>
-                <div className="font-mono text-[13px] leading-[1.4] tracking-[0.14em] text-white/65 uppercase">
+                <div className="font-mono text-[14px] leading-[1.4] tracking-[0.12em] text-white/70 uppercase">
                   {stat.label}
                 </div>
               </div>

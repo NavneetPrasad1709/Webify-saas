@@ -96,9 +96,9 @@ html.lenis body {
  * survives being composited over the bright 3D sphere. */
 .eyebrow {
   font-family: var(--font-mono);
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.32em;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   color: var(--color-accent);
   text-shadow:

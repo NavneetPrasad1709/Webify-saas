@@ -83,7 +83,7 @@ export default function Pricing() {
                     className="absolute top-0 left-0 z-[-1] h-[110px] w-full"
                     style={{ backgroundColor: "#0083ff", filter: "blur(116px)" }}
                   />
-                  <span className="absolute top-6 right-6 rounded-full border border-[#18caff]/40 bg-[#18caff]/10 px-3 py-1.5 font-mono text-[11px] leading-none tracking-[0.2em] text-[#18caff] uppercase">
+                  <span className="absolute top-6 right-6 rounded-full border border-[#18caff]/40 bg-[#18caff]/10 px-3 py-1.5 font-mono text-[12px] leading-none tracking-[0.18em] text-[#18caff] uppercase">
                     Popular
                   </span>
                 </>

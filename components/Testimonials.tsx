@@ -70,7 +70,7 @@ export default function Testimonials() {
                   <div className="text-base leading-none font-medium tracking-[-0.01em] text-white">
                     {t.name}
                   </div>
-                  <div className="font-mono text-xs leading-[1.3] tracking-[0.08em] text-white/60 uppercase">
+                  <div className="font-mono text-[13px] leading-[1.3] tracking-[0.08em] text-white/65 uppercase">
                     {t.role}
                   </div>
                 </div>

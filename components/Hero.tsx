@@ -89,7 +89,7 @@ export default function Hero({ ready = true }: { ready?: boolean }) {
             className="flex flex-row items-center justify-center gap-3 rounded-full border border-white/12 bg-black/80 py-2 pr-5 pl-4"
           >
             <img src="/images/badge-sparkle.svg" alt="" className="h-4 shrink-0" />
-            <span className="font-mono text-xs leading-[1.5] tracking-[0.18em] text-white/80 uppercase max-[480px]:text-[11px] max-[480px]:tracking-[0.08em]">
+            <span className="font-mono text-[13px] leading-[1.5] tracking-[0.16em] text-white/85 uppercase max-[480px]:text-[12px] max-[480px]:tracking-[0.06em]">
               <span className="max-[480px]:hidden">Now with Smart Chatbot Integration</span>
               <span className="hidden max-[480px]:inline">Smart Chatbot Integration</span>
             </span>
@@ -125,7 +125,7 @@ export default function Hero({ ready = true }: { ready?: boolean }) {
             </motion.div>
             <motion.p
               {...rise(0.74)}
-              className="on-scene font-mono text-xs leading-[1.6] tracking-[0.22em] text-white/60 uppercase max-[480px]:text-[11px] max-[480px]:tracking-[0.1em]"
+              className="on-scene font-mono text-[13px] leading-[1.6] tracking-[0.2em] text-white/70 uppercase max-[480px]:text-[12px] max-[480px]:tracking-[0.08em]"
             >
               1M+ teams · 99.99% uptime · 24/7 support
             </motion.p>

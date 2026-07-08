@@ -38,5 +38,8 @@ npm start
 ## Assets
 
 All images, the GLB model, its alpha map, and the Draco decoder are served
-locally from `public/`. 3D model credit: Tamminen (sketchfab.com/tamminen), as
-credited in the site footer.
+locally from `public/`.
+
+---
+
+Designed & developed by [Webify](https://webify.org.in).
